@@ -1,25 +1,33 @@
 body {
-    background-color: yellow;
+    background-color: #283618;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 32px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
-        "header header header"
-        "sidebar main main"
-        "sidebar main main"
-        "sidebar main main"
-        "sidebar main main"
-        "footer footer footer";
+        "header header header header"
+        "sidebar main main main"
+        "sidebar main main main"
+        "sidebar main main main"
+        "sidebar main main main"
+        "footer footer footer footer";
     gap: 10px;
     height: 100vh;
 }
 
 .header {
     grid-area: header;
-    background-color: cornsilk;
+    background-color: #FEFAE0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,20 +35,42 @@ body {
 
 .sidebar {
     grid-area: sidebar;
-    background-color: beige;
+    background-color: #283618;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
 }
 
 .main {
     grid-area: main;
-    background-color: blanchedalmond;
+    background-color: #BC6C25;
 }
 
 .footer {
     grid-area: footer;
-    background-color: brown;
+    background-color: #606C38;
 }
 
 .flexi img {
     width: 100px;
     height: auto;
+}
+
+.sidflex {
+    background-color: darkgoldenrod;
+    flex-grow: 1;
+}
+
+.side {
+    margin: 50px;
+}
+
+#primo {
+    visibility: hidden;
+}
+
+#secondo {
+    visibility: hidden;
 }
